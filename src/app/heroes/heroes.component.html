@@ -1,11 +1,31 @@
-<h2>My Heroes</h2>
-<ul class="heroes">
-    <li *ngFor="let hero of heroes"
-        [class.selected]="hero === selectedHero" 
-        (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span>{{hero.name}}
-        <img src="https://salt.tikicdn.com/ts/product/05/26/27/198e664804f848ae38f1d482fbf2426c.png"/>
-    </li>
-</ul>
+<div container="container">
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <div class="Img">
+        <a routerLink="/detail/{{hero.id}}">
+          <!-- <span class="badge">{{hero.id}}</span> -->
+          <img src="{{hero.src}}"/>
+        </a>
+      </div>
+      <div class="Btn">
+        <button class="delete" 
+                title="delete hero"
+                (click)="delete(hero)">
+              x
+        </button>
+      </div>
+      <div style="clear: both;"></div>
+      </li>
+  </ul>
+  
+  <div class="addForm">
+    <label>Hero name:
+      <input #heroName />
+    </label>
+    <button (click)="add(heroName.value);heroName.value=''">
+      Add
+    </button>
+  </div>
+  <div style="clear: both;"></div>
+</div>
 
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>

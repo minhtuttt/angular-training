@@ -1,23 +1,38 @@
+container {
+    height: 500px;
+    background-color: violet;
+    width: 100%;
+}
 .heroes {
-    margin: 0 0 2em 0;
+    /* margin: 0 0 2em 0; */
     list-style-type: none;
-    padding: 0;
-    /* width: 15em; */
+    height: 800px;
+    float: left;
+    width: 560px;
+    background-color: white;
+}
+ul {
+    overflow: scroll;
 }
 li {
-    display: inline;
+    display: inline-table;
+    height: auto;
+    margin-left: 14px;
+    float: left;
 }
-img {
-    height: 100px;
-    width: 50px;
+.Btn {
+    float: right;
+    width: 20%;
+}
+.delete {
+    width: 25px;
 }
 .heroes li {
-    cursor: pointer;
     position: relative;
-    left: 0;
+    cursor: pointer;
     background-color: #EEE;
     margin: .5em;
-    padding: .3cm 0;
+    padding: .3em 0;
     height: 1.6em;
     border-radius: 4px;
 }
@@ -26,19 +41,17 @@ img {
     background-color: #DDD;
     left: .1em;
 }
-.heroes li.selected {
-    background-color: #BBD8DC;
-    color: white;
+.heroes a {
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 250px;
 }
-.heroes li.selected {
-    background-color: #BBD8DC;
-    color: white;
+.heroes a:hover {
+    color:#607D8B;
 }
-.heroes li.selected:hover {
-    background-color: #BBD8DC;
-    color: white;
-  }
-  .heroes .badge {
+.heroes .badge {
     display: inline-block;
     font-size: small;
     color: white;
@@ -49,6 +62,26 @@ img {
     left: -1px;
     top: -4px;
     height: 1.8em;
+    min-width: 16px;
+    text-align: right;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
-  }
+}
+Img {
+    width: 80%;
+}
+a img {
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.addForm {
+    color: white;
+    width: 220px;
+    float: right;
+    background-color: darkcyan;
+    height: 790px;
+    padding: 10px 10px 0 10px;
+
+}
